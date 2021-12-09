@@ -7,23 +7,17 @@ font-family: 'Poppins', sans-serif;
 }
 body{
     display: flex;
-    
-    /* align-items: center;
-    justify-content: center; */
     min-height: 100vh;
     background: #fff;
 }
 #navigation{
     display: flex;
-    /* top: 35px;
-    left: 10px; */
     align-items: center;
     justify-content: center;
     background: #333;
     position: fixed;
     height: 150px;
     width: 100vw;
-    /* width: 350px; */
     border-radius: 5px;
 }
 .logo{
@@ -35,11 +29,11 @@ body{
     width: 80px;
     height: 80px;
     background-color: aqua;
-    /* position: absolute; */
 }
 .object{
 
     flex: 1;
+
 }
 ul{
     justify-content: center;
@@ -49,6 +43,7 @@ ul{
     padding-left: 20px;
     display: flex;
     width: 420px;
+    height: 100px;
     border-radius: 10px;
 }
 ul li{
@@ -79,7 +74,8 @@ ul li a .icon{
     color: black;
 }
 ul li.active a .icon{
-    transform: translateY(-32px);
+    transform: translateY(-10px);
+    color: #fff;
 }
 .text{
     position: absolute;
@@ -94,54 +90,37 @@ ul li.active a .icon{
 ul li.active  a .text{
     opacity: 1;
     transform: translateY(10px);
+    color: #fff;
+
 }
 .indicator{
     position: absolute;
-    /* justify-content: center; */
-    /* align-items: center; */
-    top: -50%;    
     left: 80px;
     width: 70px;
-    border-radius: 50%;
+    border-radius: 5px;
     height: 70px; 
     background: #29fd53; 
-    border: 6px solid #333;
     transition: 0.5s;
 } 
-.indicator::before
-{
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -22px;
-    width: 20px;
-    height: 20px;
-    background: transparent;
-    border-top-right-radius: 20px;
-    box-shadow: 1px -10px 0 0 #333;
-}
-.indicator::after
-{
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -22px;
-    width: 20px;
-    height: 20px;
-    background: transparent;
-    border-top-left-radius: 20px;
-    box-shadow: -1px -10px 0 0 #333;
-}
 ul li:nth-child(1).active ~ .indicator{
-    transform: translateX(calc(70px*0));
+    transform: translateX(calc(70px*0)); 
+    background: rgb(255, 52, 52);
+    box-shadow: 0 5px 70px 5px rgb(255, 52, 52); /* h-radius v-radius blur spread */
+    
 }
 ul li:nth-child(2).active ~ .indicator{
     transform: translateX(calc(70px*1));
+    background: rgb(77, 77, 241);
+    box-shadow: 0 5px 70px 5px rgb(77, 77, 255);
 }
 ul li:nth-child(3).active ~ .indicator{
     transform: translateX(calc(70px*2));
+    background: rgb(91, 252, 59);
+    box-shadow: 0 5px 70px 5px rgb(91, 252, 59);
 }
 ul li:nth-child(4).active ~ .indicator{
     transform: translateX(calc(70px*3));
+    background: rgb(255, 119, 40);
+    box-shadow: 0 5px 70px 5px rgb(255, 130, 57);
 }
 
